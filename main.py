@@ -79,7 +79,7 @@ def main():
 #     st.set_page_config(page_title="Solar Power Forecasting App", page_icon=":sunny:")
 
     # Set header image
-    header_image = Image.open("GIL_Image.png")
+    header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png")
     st.image(header_image, use_column_width=True)
 
     # Set author info
