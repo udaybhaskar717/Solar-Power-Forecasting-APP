@@ -87,7 +87,7 @@ def main():
 #     st.image(image, use_column_width=True)
 #     st.sidebar.image(image)
 # Create a container for the image
-img_container = st.beta_container()
+img_container = st.container()
 # Add the image to the container
 with img_container:
     st.image(image, use_column_width=True)
