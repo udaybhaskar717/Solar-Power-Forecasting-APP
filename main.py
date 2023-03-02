@@ -14,10 +14,6 @@ from datetime import datetime
 import pickle
 import tensorflow as tf
 import requests
-# filename = 'https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/stack_reg_1.pkl'
-# with open(filename, 'rb') as file:
-#     my_model = pickle.load(file)
-# model = tf.keras.models.load_model("stack_reg_1.pkl")
 
 
 # Define the URL of the .pkl file on GitHub
@@ -29,11 +25,6 @@ file_contents = response.content
 
 # Load the model object from the file contents using pickle
 model = pickle.loads(file_contents)
-
-# Use the loaded model object in your Streamlit app
-
-# # load the trained model
-# model = my_model
 
 # define a function to make predictions
 def predict_solar_power(df):
@@ -68,7 +59,7 @@ def get_user_inputs():
 
 # create the app
 def main():
-    st.title("GIL Solar Power Forecasting Tool for Gandikota PV plant")
+#     st.title("GIL Solar Power Forecasting Tool for Gandikota PV plant")
 #     header_style = "<p style='font-size:24px; font-weight:bold'>{}</p>"
     
 #     # display header text with different font sizes
@@ -77,7 +68,7 @@ def main():
     # get user inputs
     
         # Set page title and favicon
-#     st.set_page_config(page_title="Solar Power Forecasting App", page_icon=":sunny:")
+    st.set_page_config(page_title="Solar Power Forecasting App", page_icon=":sunny:")
 
     # Set header image
     # load image from URL
