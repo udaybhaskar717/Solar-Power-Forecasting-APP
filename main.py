@@ -85,6 +85,7 @@ def main():
     image = Image.open(requests.get(url, stream=True).raw)
 #     header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png?raw=true")
     st.image(image, use_column_width=True)
+    st.sidebar.image(image)
     
 #     st.write("Developed by")
 #     st.write("# G R Uday Kumar Reddy (213170007)")
