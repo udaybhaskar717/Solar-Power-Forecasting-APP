@@ -87,17 +87,17 @@ def main():
     st.image(image, use_column_width=True)
 
     # Set author info
-    col1, col2, col3 = st.beta_columns([1, 1, 1])
+    col1, col2, col3 = st.beta_columns([1, 1])
     with col1:
         st.write("Developed by")
-        st.header("G R Uday Kumar Reddy (213170007)")
+        st.write("G R Uday Kumar Reddy (213170007)",font_size=20)
     with col2:
         st.write("Under the Guidance of")
-        st.header("Prof. Zakir Hussain Rather")
-    with col3:
-        author_image = Image.open("author_image.jpg")
-        st.image(author_image, use_column_width=True)
-        st.write("Author Information", font_size=20)
+        st.write("Prof. Zakir Hussain Rather",font_size=20)
+#     with col3:
+#         author_image = Image.open("author_image.jpg")
+#         st.image(author_image, use_column_width=True)
+#         st.write("Author Information", font_size=20)
     user_inputs = get_user_inputs()
 
     # make predictions
