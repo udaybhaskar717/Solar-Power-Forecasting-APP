@@ -84,8 +84,13 @@ def main():
     url = "https://raw.githubusercontent.com/udaybhaskar717/Solar-Power-Forecasting-APP/main/GIL_Image.png"
     image = Image.open(requests.get(url, stream=True).raw)
 #     header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png?raw=true")
-    st.image(image, use_column_width=True)
+#     st.image(image, use_column_width=True)
 #     st.sidebar.image(image)
+# Create a container for the image
+img_container = st.beta_container()
+# Add the image to the container
+with img_container:
+    st.image(image, use_column_width=True)
     st.markdown(
         """
         <style>
