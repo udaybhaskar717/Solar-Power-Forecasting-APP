@@ -68,11 +68,11 @@ def get_user_inputs():
 # create the app
 def main():
     st.title("GIL Solar Power Forecasting Tool for Gandikota PV plant")
-    header_style = "<p style='font-size:24px; font-weight:bold'>{}</p>"
+#     header_style = "<p style='font-size:24px; font-weight:bold'>{}</p>"
     
-    # display header text with different font sizes
-    st.markdown(header_style.format("Developed by G R Uday Kumar Reddy"), unsafe_allow_html=True)
-    st.markdown(header_style.format("Under the guidance of Prof. Zakir Hussain Rather"), unsafe_allow_html=True)
+#     # display header text with different font sizes
+#     st.markdown(header_style.format("Developed by G R Uday Kumar Reddy"), unsafe_allow_html=True)
+#     st.markdown(header_style.format("Under the guidance of Prof. Zakir Hussain Rather"), unsafe_allow_html=True)
     # get user inputs
     user_inputs = get_user_inputs()
 
@@ -83,10 +83,12 @@ def main():
         st.subheader("Predicted solar power output:")
         st.write(f"{predictions[0]:.2f} kW")
     st.markdown("---")
-    st.write("Developed by")
-    st.write("G R Uday Kumar Reddy (213170007)")
-    st.write("Under the Guidance of")
-    st.write("Prof. Zakir Hussain Rather")
+    # add author's information
+    st.markdown("<br><br><br>", unsafe_allow_html=True) # to add some space
+    st.markdown("<p style='font-size:20px;'>Developed by</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:24px; font-weight:bold;'>G R Uday Kumar Reddy (213170007)</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:20px;'>Under the Guidance of</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:24px; font-weight:bold;'>Prof. Zakir Hussain Rather</p>", unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()
