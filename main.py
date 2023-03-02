@@ -8,6 +8,7 @@ Original file is located at
 """
 import streamlit as st
 import joblib
+from PIL import Image
 import pandas as pd
 from datetime import datetime
 import pickle
@@ -79,7 +80,10 @@ def main():
 #     st.set_page_config(page_title="Solar Power Forecasting App", page_icon=":sunny:")
 
     # Set header image
-    header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png")
+    # load image from URL
+    url = "https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png"
+    image = Image.open(requests.get(url, stream=True).raw)
+    header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png?raw=true")
     st.image(header_image, use_column_width=True)
 
     # Set author info
