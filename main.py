@@ -93,12 +93,9 @@ def main():
     # check if the email ID ends with "@iitb.ac.in"
     if email.endswith("@iitb.ac.in"):
         if st.button("Login"):
-            user_inputs = get_user_inputs()
-
-            # make predictions
-            predictions = predict_solar_power(user_inputs)
-
             if st.button("Forecast"):
+                user_inputs = get_user_inputs()
+                predictions = predict_solar_power(user_inputs)
                 st.subheader("Predicted solar power output:")
                 st.write(f"{predictions[0]:.2f} kW")
 
