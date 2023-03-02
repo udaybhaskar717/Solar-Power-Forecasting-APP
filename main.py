@@ -103,20 +103,20 @@ def main():
         
         
 #         # check if the email ID ends with "@iitb.ac.in"
-#     if email.endswith('@iitb.ac.in'):
-#         password = st.text_input("Password", type="password",key='password_input')
-#         if password == "GIL":
-#             session_state.is_logged_in = True
-#         else:
-#             st.error("Incorrect email or password. Please try again.")
+    if email.endswith('@iitb.ac.in'):
+        password = st.text_input("Password", type="password",key='password_input')
+        if password == "GIL":
+            session_state.is_logged_in = True
+        else:
+            st.error("Incorrect email or password. Please try again.")
 
-#     # display the solar power forecasting tool if the user is logged in
-#     if session_state.is_logged_in:
-#         st.subheader("Solar Power Forecasting Tool")
-#         user_inputs = get_user_inputs()
-#         predictions = predict_solar_power(user_inputs)
-#         st.write("The predicted solar power output (in kW) is:")
-#         st.write(predictions)
+    # display the solar power forecasting tool if the user is logged in
+    if session_state.is_logged_in:
+        st.subheader("Solar Power Forecasting Tool")
+        user_inputs = get_user_inputs()
+        predictions = predict_solar_power(user_inputs)
+        st.write("The predicted solar power output (in kW) is:")
+        st.write(predictions)
 
     st.markdown("<br><br><br>", unsafe_allow_html=True) # to add some space
     st.markdown("<p style='font-size:20px;'>Developed by</p>", unsafe_allow_html=True)
