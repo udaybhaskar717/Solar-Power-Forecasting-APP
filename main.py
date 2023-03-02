@@ -68,7 +68,11 @@ def get_user_inputs():
 # create the app
 def main():
     st.title("GIL Solar Power Forecasting Tool for Gandikota PV plant")
-
+    header_style = "<p style='font-size:24px; font-weight:bold'>{}</p>"
+    
+    # display header text with different font sizes
+    st.markdown(header_style.format("Developed by G R Uday Kumar Reddy"), unsafe_allow_html=True)
+    st.markdown(header_style.format("Under the guidance of Prof. Zakir Hussain Rather"), unsafe_allow_html=True)
     # get user inputs
     user_inputs = get_user_inputs()
 
@@ -81,7 +85,7 @@ def main():
     st.markdown("---")
     st.write("Developed by")
     st.write("G R Uday Kumar Reddy (213170007)")
-    st.write("Under the Guidance")
+    st.write("Under the Guidance of")
     st.write("Prof. Zakir Hussain Rather")
 
 if __name__ == '__main__':
