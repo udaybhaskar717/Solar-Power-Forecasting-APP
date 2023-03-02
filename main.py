@@ -85,7 +85,24 @@ def main():
     image = Image.open(requests.get(url, stream=True).raw)
 #     header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png?raw=true")
     st.image(image, use_column_width=True)
-    st.sidebar.image(image)
+#     st.sidebar.image(image)
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stApp > div:first-child {
+            margin-top: -80px;
+            margin-right: 20px;
+            align-self: flex-end;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     
 #     st.write("Developed by")
 #     st.write("# G R Uday Kumar Reddy (213170007)")
