@@ -99,8 +99,8 @@ def main():
                 flex-direction: column;
             }
             .stApp > div:first-child {
-                margin-top: -80px;
-                margin-right: 20px;
+                margin-top: -30px;
+                margin-right: 10px;
                 align-self: flex-end;
             }
             </style>
