@@ -59,31 +59,18 @@ def get_user_inputs():
 
 # create the app
 def main():
-#     st.title("GIL Solar Power Forecasting Tool for Gandikota PV plant")
-#     header_style = "<p style='font-size:24px; font-weight:bold'>{}</p>"
-    
-#     # display header text with different font sizes
-#     st.markdown(header_style.format("Developed by G R Uday Kumar Reddy"), unsafe_allow_html=True)
-#     st.markdown(header_style.format("Under the guidance of Prof. Zakir Hussain Rather"), unsafe_allow_html=True)
-    # get user inputs
-    
-        # Set page title and favicon
-    st.set_page_config(page_title="Solar Power Forecasting App", page_icon=":sunny:")
-
+    st.title("GIL Solar Power Forecasting Tool for Gandikota PV plant")
     # Set header image
     # load image from URL
     url = "https://raw.githubusercontent.com/udaybhaskar717/Solar-Power-Forecasting-APP/main/GIL_Image.png"
     image = Image.open(requests.get(url, stream=True).raw)
-#     header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png?raw=true")
-#     st.image(image, use_column_width=True)
-#     st.sidebar.image(image)
 # Create a container for the image
     img_container = st.container()
   # Add the image to the container
     with img_container:
         st.image(image, use_column_width=True)
         st.markdown(
-            """
+      
             <style>
             .stApp {
                 display: flex;
@@ -95,7 +82,7 @@ def main():
                 align-self: flex-end;
             }
             </style>
-            """,
+          ,
             unsafe_allow_html=True
         )
 
