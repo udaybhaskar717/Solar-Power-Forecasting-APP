@@ -64,27 +64,27 @@ def main():
     # load image from URL
     url = "https://raw.githubusercontent.com/udaybhaskar717/Solar-Power-Forecasting-APP/main/GIL_Image.png"
     image = Image.open(requests.get(url, stream=True).raw)
+    st.image('https://raw.githubusercontent.com/udaybhaskar717/Solar-Power-Forecasting-APP/main/GIL_Image.png', width=150, use_column_width=False, caption='Image credit: Placeholder.com', align='right')
 # Create a container for the image
-    img_container = st.container()
-  # Add the image to the container
-    with img_container:
-        st.image(image, use_column_width=True)
-        st.markdown(
-      
-            <style>
-            .stApp {
-                display: flex;
-                flex-direction: column;
-            }
-            .stApp > div:first-child {
-                margin-top: -30px;
-                margin-right: 10px;
-                align-self: flex-end;
-            }
-            </style>
-          ,
-            unsafe_allow_html=True
-        )
+#     img_container = st.container()
+#   # Add the image to the container
+#     with img_container:
+#         st.image(image, use_column_width=True)
+#         st.markdown(
+#             <style>
+#             .stApp {
+#                 display: flex;
+#                 flex-direction: column;
+#             }
+#             .stApp > div:first-child {
+#                 margin-top: -30px;
+#                 margin-right: 10px;
+#                 align-self: flex-end;
+#             }
+#             </style>
+#           ,
+#             unsafe_allow_html=True
+#         )
 
 #     st.write("Developed by")
 #     st.write("# G R Uday Kumar Reddy (213170007)")
