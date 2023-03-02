@@ -74,10 +74,10 @@ def main():
 
     # make predictions
     predictions = predict_solar_power(user_inputs)
-
-    # display the predictions
-    st.subheader("Predicted solar power output:")
-    st.write(f"{predictions[0]:.2f} kW")
+    
+    if st.button("Forecast"):
+        st.subheader("Predicted solar power output:")
+        st.write(f"{predictions[0]:.2f} kW")
 
 if __name__ == '__main__':
     main()
