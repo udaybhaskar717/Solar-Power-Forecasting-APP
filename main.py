@@ -79,8 +79,10 @@ def main():
         st.subheader("Predicted solar power output:")
         st.write(f"{predictions[0]:.2f} kW")
     st.markdown("---")
-    st.write("Developed by \n G R Uday Kumar Reddy")
-    st.write("Under the Guidance \n Prof. Zakir Hussain Rather")
+    st.write("Developed by")
+    st.write("G R Uday Kumar Reddy (213170007)")
+    st.write("Under the Guidance")
+    st.write("Prof. Zakir Hussain Rather")
 
 if __name__ == '__main__':
     main()
