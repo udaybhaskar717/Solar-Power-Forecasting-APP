@@ -74,6 +74,26 @@ def main():
 #     st.markdown(header_style.format("Developed by G R Uday Kumar Reddy"), unsafe_allow_html=True)
 #     st.markdown(header_style.format("Under the guidance of Prof. Zakir Hussain Rather"), unsafe_allow_html=True)
     # get user inputs
+    
+        # Set page title and favicon
+    st.set_page_config(page_title="Solar Power Forecasting App", page_icon=":sunny:")
+
+    # Set header image
+    header_image = Image.open("header_image.jpg")
+    st.image(header_image, use_column_width=True)
+
+    # Set author info
+    col1, col2, col3 = st.beta_columns([1, 1, 1])
+    with col1:
+        st.write("Developed by")
+        st.header("G R Uday Kumar Reddy (213170007)")
+    with col2:
+        st.write("Under the Guidance of")
+        st.header("Prof. Zakir Hussain Rather")
+    with col3:
+        author_image = Image.open("author_image.jpg")
+        st.image(author_image, use_column_width=True)
+        st.write("Author Information", font_size=20)
     user_inputs = get_user_inputs()
 
     # make predictions
