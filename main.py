@@ -11,14 +11,14 @@ import joblib
 import pandas as pd
 from datetime import datetime
 import pickle
+import tensorflow as tf
+# filename = 'https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/stack_reg_1.pkl'
+# with open(filename, 'rb') as file:
+#     my_model = pickle.load(file)
+model = tf.keras.models.load_model("stack_reg_1.pkl")
 
-filename = 'https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/stack_reg_1.pkl'
-with open(filename, 'rb') as file:
-    my_model = pickle.load(file)
-
-
-# load the trained model
-model = my_model
+# # load the trained model
+# model = my_model
 
 # define a function to make predictions
 def predict_solar_power(df):
