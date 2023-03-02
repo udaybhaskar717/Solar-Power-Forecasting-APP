@@ -85,18 +85,36 @@ def main():
             unsafe_allow_html=True
         )
 
-#     st.write("Developed by")
-#     st.write("# G R Uday Kumar Reddy (213170007)")
-#     st.write("Under the Guidance of")
-#     st.write("# Prof. Zakir Hussain Rather")
-    user_inputs = get_user_inputs()
+        
+            # add login section
+    st.subheader("Login")
+    email = st.text_input("Email ID")
 
-    # make predictions
-    predictions = predict_solar_power(user_inputs)
+    # check if the email ID ends with "@iitb.ac.in"
+    if email.endswith("@iitb.ac.in"):
+        if st.button("Login"):
+            user_inputs = get_user_inputs()
+
+            # make predictions
+            predictions = predict_solar_power(user_inputs)
+
+            if st.button("Forecast"):
+                st.subheader("Predicted solar power output:")
+                st.write(f"{predictions[0]:.2f} kW")
+    else:
+        st.write("Access Denied")
+# #     st.write("Developed by")
+# #     st.write("# G R Uday Kumar Reddy (213170007)")
+# #     st.write("Under the Guidance of")
+# #     st.write("# Prof. Zakir Hussain Rather")
+#     user_inputs = get_user_inputs()
+
+#     # make predictions
+#     predictions = predict_solar_power(user_inputs)
     
-    if st.button("Forecast"):
-        st.subheader("Predicted solar power output:")
-        st.write(f"{predictions[0]:.2f} kW")
+#     if st.button("Forecast"):
+#         st.subheader("Predicted solar power output:")
+#         st.write(f"{predictions[0]:.2f} kW")
     st.markdown("---")
     # add author's information
     st.markdown("<br><br><br>", unsafe_allow_html=True) # to add some space
