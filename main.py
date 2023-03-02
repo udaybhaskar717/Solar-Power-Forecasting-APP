@@ -92,7 +92,7 @@ def main():
 
     # add login section
     st.subheader("Login")
-    email = st.text_input("Email ID")
+    email = st.text_input("Email ID",key='email_input')
 
     # check if the email ID ends with "@iitb.ac.in"
     if email.endswith("@iitb.ac.in"):
