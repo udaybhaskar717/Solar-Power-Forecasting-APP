@@ -87,28 +87,27 @@ def main():
 #     st.image(image, use_column_width=True)
 #     st.sidebar.image(image)
 # Create a container for the image
-img_container = st.container()
-# Add the image to the container
-with img_container:
-    st.image(image, use_column_width=True)
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            display: flex;
-            flex-direction: column;
-        }
+    img_container = st.container()
+  # Add the image to the container
+    with img_container:
+        st.image(image, use_column_width=True)
+        st.markdown(
+            """
+            <style>
+            .stApp {
+                display: flex;
+                flex-direction: column;
+            }
+            .stApp > div:first-child {
+                margin-top: -80px;
+                margin-right: 20px;
+                align-self: flex-end;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
 
-        .stApp > div:first-child {
-            margin-top: -80px;
-            margin-right: 20px;
-            align-self: flex-end;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-    
 #     st.write("Developed by")
 #     st.write("# G R Uday Kumar Reddy (213170007)")
 #     st.write("Under the Guidance of")
