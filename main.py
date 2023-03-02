@@ -14,7 +14,6 @@ from datetime import datetime
 import pickle
 import tensorflow as tf
 import requests
-import SessionState
 
 # Define the URL of the .pkl file on GitHub
 github_url = 'https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/raw/main/stack_reg_1.pkl'
