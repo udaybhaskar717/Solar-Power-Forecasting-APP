@@ -44,16 +44,16 @@ def predict_solar_power(df):
 def get_user_inputs():
     st.header("Enter the weather data:")
     date = st.date_input("Date", datetime.now().date())
-    Ambinet_temp = st.number_input("Temperature (°C)", value=25.0)
-    Module_temp = st.number_input("Temperature (°C)", value=25.0)
-    Irradiance = st.number_input("Irradiance (W/m^2)", value=1000.0)
-    # wind_speed = st.number_input("Wind Speed (m/s)", value=3.0)
-    # pressure = st.number_input("Pressure (hPa)", value=1013.0)
+    Ambient_temp = st.number_input("Ambient Temperature (°C)", value=25.0, key="ambient_temp")
+    Module_temp = st.number_input("Module Temperature (°C)", value=25.0, key="module_temp")
+    Irradiance = st.number_input("Irradiance (W/m^2)", value=1000.0, key="irradiance")
+    # wind_speed = st.number_input("Wind Speed (m/s)", value=3.0, key="wind_speed")
+    # pressure = st.number_input("Pressure (hPa)", value=1013.0, key="pressure")
 
     # create a DataFrame with the user inputs
     user_inputs = pd.DataFrame({
-        'AMBIENT_TEMPERATURE': [Ambinet_temp],
-        'MODULE_TEMPERATURE':[Module_temp],
+        'AMBIENT_TEMPERATURE': [Ambient_temp],
+        'MODULE_TEMPERATURE': [Module_temp],
         'IRRADIATION': [Irradiance]
         # 'Wind Speed': [wind_speed],
         # 'Pressure': [pressure]
