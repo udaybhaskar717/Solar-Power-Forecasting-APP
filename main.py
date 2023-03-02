@@ -85,11 +85,6 @@ def main():
             unsafe_allow_html=True
         )
 
-        
-            # add login section
-    st.subheader("Login")
-    email = st.text_input("Email ID")
-
     # add login section
     st.subheader("Login")
     email = st.text_input("Email ID",key='email_input')
@@ -102,29 +97,12 @@ def main():
             if st.button("Forecast"):
                 st.subheader("Predicted solar power output:")
                 st.write(f"{predictions[0]:.2f} kW")
-
     else:
         st.write("Access Denied")
-
-# #     st.write("Developed by")
-# #     st.write("# G R Uday Kumar Reddy (213170007)")
-# #     st.write("Under the Guidance of")
-# #     st.write("# Prof. Zakir Hussain Rather")
-#     user_inputs = get_user_inputs()
-
-#     # make predictions
-#     predictions = predict_solar_power(user_inputs)
-    
-#     if st.button("Forecast"):
-#         st.subheader("Predicted solar power output:")
-#         st.write(f"{predictions[0]:.2f} kW")
-    st.markdown("---")
-    # add author's information
     st.markdown("<br><br><br>", unsafe_allow_html=True) # to add some space
     st.markdown("<p style='font-size:20px;'>Developed by</p>", unsafe_allow_html=True)
     st.markdown("<p style='font-size:24px; font-weight:bold;'>G R Uday Kumar Reddy (213170007)</p>", unsafe_allow_html=True)
     st.markdown("<p style='font-size:20px;'>Under the Guidance of</p>", unsafe_allow_html=True)
     st.markdown("<p style='font-size:24px; font-weight:bold;'>Prof. Zakir Hussain Rather</p>", unsafe_allow_html=True)
-
 if __name__ == '__main__':
     main()
