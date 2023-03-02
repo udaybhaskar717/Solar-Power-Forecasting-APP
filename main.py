@@ -67,7 +67,7 @@ def get_user_inputs():
 
 # create the app
 def main():
-    st.title("Solar Power Forecasting App")
+    st.title("GIL Solar Power Forecasting Tool for Gandikota PV plant")
 
     # get user inputs
     user_inputs = get_user_inputs()
