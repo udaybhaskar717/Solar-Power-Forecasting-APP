@@ -106,7 +106,7 @@ def main():
     if email.endswith('@iitb.ac.in'):
         password = st.text_input("Password", type="password",key='password_input')
         if password == "GIL":
-            session_state.is_logged_in = True
+            session_state.is_logged_in = True:
         else:
             st.error("Incorrect email or password. Please try again.")
 
