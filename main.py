@@ -90,6 +90,10 @@ def main():
     st.subheader("Login")
     email = st.text_input("Email ID")
 
+    # add login section
+    st.subheader("Login")
+    email = st.text_input("Email ID")
+
     # check if the email ID ends with "@iitb.ac.in"
     if email.endswith("@iitb.ac.in"):
         if st.button("Login"):
@@ -101,6 +105,7 @@ def main():
 
     else:
         st.write("Access Denied")
+
 # #     st.write("Developed by")
 # #     st.write("# G R Uday Kumar Reddy (213170007)")
 # #     st.write("Under the Guidance of")
