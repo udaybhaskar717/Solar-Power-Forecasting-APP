@@ -81,7 +81,7 @@ def main():
 
     # Set header image
     # load image from URL
-    url = "https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png"
+    url = "https://raw.githubusercontent.com/udaybhaskar717/Solar-Power-Forecasting-APP/main/GIL_Image.png"
     image = Image.open(requests.get(url, stream=True).raw)
 #     header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png?raw=true")
     st.image(image, use_column_width=True)
