@@ -12,7 +12,7 @@ import pandas as pd
 from datetime import datetime
 import pickle
 
-filename = '/content/drive/MyDrive/StreamlitApp/stack_reg_1.pkl'
+filename = 'https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/stack_reg_1.pkl'
 with open(filename, 'rb') as file:
     my_model = pickle.load(file)
 
