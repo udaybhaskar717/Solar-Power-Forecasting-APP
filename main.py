@@ -12,10 +12,24 @@ import pandas as pd
 from datetime import datetime
 import pickle
 import tensorflow as tf
+import requests
 # filename = 'https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/stack_reg_1.pkl'
 # with open(filename, 'rb') as file:
 #     my_model = pickle.load(file)
-model = tf.keras.models.load_model("stack_reg_1.pkl")
+# model = tf.keras.models.load_model("stack_reg_1.pkl")
+
+
+# Define the URL of the .pkl file on GitHub
+github_url = 'https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/raw/main/stack_reg_1.pkl'
+
+# Retrieve the file contents using requests
+response = requests.get(github_url)
+file_contents = response.content
+
+# Load the model object from the file contents using pickle
+model = pickle.loads(file_contents)
+
+# Use the loaded model object in your Streamlit app
 
 # # load the trained model
 # model = my_model
