@@ -89,34 +89,34 @@ def main():
     st.subheader("Login")
     email = st.text_input("Email ID",key='email_input')
 
-#     # check if the email ID ends with "@iitb.ac.in"
-#     if email.endswith("@iitb.ac.in"):
-#         if st.button("Login"):
-#             user_inputs = get_user_inputs()
-#             predictions = predict_solar_power(user_inputs)
-# #             if st.button("Forecast"):
-#             st.subheader("Predicted solar power output:")
-#             st.write(f"{predictions[0]:.2f} kW")
-#     else:
-#         st.write("Access Denied")
+    # check if the email ID ends with "@iitb.ac.in"
+    if email.endswith("@iitb.ac.in"):
+        if st.button("Login"):
+            user_inputs = get_user_inputs()
+            predictions = predict_solar_power(user_inputs)
+#             if st.button("Forecast"):
+            st.subheader("Predicted solar power output:")
+            st.write(f"{predictions[0]:.2f} kW")
+    else:
+        st.write("Access Denied")
         
         
         
-        # check if the email ID ends with "@iitb.ac.in"
-    if email.endswith('@iitb.ac.in'):
-        password = st.text_input("Password", type="password",key='password_input')
-        if password == "GIL":
-            session_state.is_logged_in = True:
-        else:
-            st.error("Incorrect email or password. Please try again.")
+#         # check if the email ID ends with "@iitb.ac.in"
+#     if email.endswith('@iitb.ac.in'):
+#         password = st.text_input("Password", type="password",key='password_input')
+#         if password == "GIL":
+#             session_state.is_logged_in = True
+#         else:
+#             st.error("Incorrect email or password. Please try again.")
 
-    # display the solar power forecasting tool if the user is logged in
-    if session_state.is_logged_in:
-        st.subheader("Solar Power Forecasting Tool")
-        user_inputs = get_user_inputs()
-        predictions = predict_solar_power(user_inputs)
-        st.write("The predicted solar power output (in kW) is:")
-        st.write(predictions)
+#     # display the solar power forecasting tool if the user is logged in
+#     if session_state.is_logged_in:
+#         st.subheader("Solar Power Forecasting Tool")
+#         user_inputs = get_user_inputs()
+#         predictions = predict_solar_power(user_inputs)
+#         st.write("The predicted solar power output (in kW) is:")
+#         st.write(predictions)
 
     st.markdown("<br><br><br>", unsafe_allow_html=True) # to add some space
     st.markdown("<p style='font-size:20px;'>Developed by</p>", unsafe_allow_html=True)
