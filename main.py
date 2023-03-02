@@ -84,20 +84,20 @@ def main():
             unsafe_allow_html=True
         )
 
-    # add login section
-    st.subheader("Login")
-    email = st.text_input("Email ID",key='email_input')
+#     # add login section
+#     st.subheader("Login")
+#     email = st.text_input("Email ID",key='email_input')
 
     # check if the email ID ends with "@iitb.ac.in"
-    if email.endswith("@iitb.ac.in"):
-        if st.button("Login"):
-            user_inputs = get_user_inputs()
-            predictions = predict_solar_power(user_inputs)
+#     if email.endswith("@iitb.ac.in"):
+#         if st.button("Login"):
+        user_inputs = get_user_inputs()
+        predictions = predict_solar_power(user_inputs)
 #             if st.button("Forecast"):
-            st.subheader("Predicted solar power output:")
-            st.write(f"{predictions[0]:.2f} kW")
-    else:
-        st.write("Access Denied")
+        st.subheader("Predicted solar power output:")
+        st.write(f"{predictions[0]:.2f} kW")
+#     else:
+#         st.write("Access Denied")
         
         
         
