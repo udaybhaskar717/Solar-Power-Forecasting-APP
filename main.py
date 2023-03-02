@@ -86,10 +86,10 @@ def main():
 #     header_image = Image.open("https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/blob/main/GIL_Image.png?raw=true")
     st.image(image, use_column_width=True)
     
-    st.write("Developed by")
-    st.write("# G R Uday Kumar Reddy (213170007)")
-    st.write("Under the Guidance of")
-    st.write("# Prof. Zakir Hussain Rather")
+#     st.write("Developed by")
+#     st.write("# G R Uday Kumar Reddy (213170007)")
+#     st.write("Under the Guidance of")
+#     st.write("# Prof. Zakir Hussain Rather")
     user_inputs = get_user_inputs()
 
     # make predictions
