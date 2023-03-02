@@ -78,6 +78,9 @@ def main():
     if st.button("Forecast"):
         st.subheader("Predicted solar power output:")
         st.write(f"{predictions[0]:.2f} kW")
+    st.markdown("---")
+    st.write("Developed by G R Uday Kumar Reddy")
+    st.write("Under the Guidance of Prof. Zakir Hussain Rather")
 
 if __name__ == '__main__':
     main()
