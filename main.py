@@ -14,7 +14,7 @@ from datetime import datetime
 import pickle
 import tensorflow as tf
 import requests
-
+import SessionState
 
 # Define the URL of the .pkl file on GitHub
 github_url = 'https://github.com/udaybhaskar717/Solar-Power-Forecasting-APP/raw/main/stack_reg_1.pkl'
@@ -89,16 +89,16 @@ def main():
     st.subheader("Login")
     email = st.text_input("Email ID",key='email_input')
 
-    # check if the email ID ends with "@iitb.ac.in"
-    if email.endswith("@iitb.ac.in"):
-        if st.button("Login"):
-            user_inputs = get_user_inputs()
-            predictions = predict_solar_power(user_inputs)
-            if st.button("Forecast"):
-                st.subheader("Predicted solar power output:")
-                st.write(f"{predictions[0]:.2f} kW")
-    else:
-        st.write("Access Denied")
+#     # check if the email ID ends with "@iitb.ac.in"
+#     if email.endswith("@iitb.ac.in"):
+#         if st.button("Login"):
+#             user_inputs = get_user_inputs()
+#             predictions = predict_solar_power(user_inputs)
+#             if st.button("Forecast"):
+#                 st.subheader("Predicted solar power output:")
+#                 st.write(f"{predictions[0]:.2f} kW")
+#     else:
+#         st.write("Access Denied")
         
         
         
